@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="EnterpriseMvcApp.Application/EnterpriseMvcApp.Application.csproj" />
+  <Project Path="EnterpriseMvcApp.Domain/EnterpriseMvcApp.Domain.csproj" />
+  <Project Path="EnterpriseMvcApp.Infrastructure/EnterpriseMvcApp.Infrastructure.csproj" />
+  <Project Path="EnterpriseMvcApp.Web/EnterpriseMvcApp.Web.csproj" />
+</Solution>

@@ -1,0 +1,42 @@
+@model ContatoClienteViewModel
+@{
+    var idx = ViewData["Index"]?.ToString() ?? "0";
+}
+
+<div class="contato-item border rounded p-3 mb-3" data-index="@idx">
+    <input type="hidden" name="Contatos[@idx].Id" value="@Model.Id" />
+
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">Nome</label>
+            <input name="Contatos[@idx].Nome" value="@Model.Nome" class="form-control" />
+            <span class="text-danger field-validation-valid" data-valmsg-for="Contatos[@idx].Nome" data-valmsg-replace="true"></span>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Cargo</label>
+            <input name="Contatos[@idx].Cargo" value="@Model.Cargo" class="form-control" />
+            <span class="text-danger field-validation-valid" data-valmsg-for="Contatos[@idx].Cargo" data-valmsg-replace="true"></span>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Email</label>
+            <input name="Contatos[@idx].Email" value="@Model.Email" class="form-control" />
+            <span class="text-danger field-validation-valid" data-valmsg-for="Contatos[@idx].Email" data-valmsg-replace="true"></span>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Telefone</label>
+            <input name="Contatos[@idx].Telefone" value="@Model.Telefone" class="form-control" />
+            <span class="text-danger field-validation-valid" data-valmsg-for="Contatos[@idx].Telefone" data-valmsg-replace="true"></span>
+        </div>
+        <div class="col-md-2 d-flex align-items-end">
+            <div class="form-check mb-2">
+                <input type="hidden" name="Contatos[@idx].Principal" value="false" />
+                <input name="Contatos[@idx].Principal" value="true" class="form-check-input" type="checkbox" @(Model.Principal ? "checked" : null) />
+                <label class="form-check-label">Principal</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3 text-end">
+        <button type="button" class="btn btn-outline-danger btn-sm btn-remover-contato">Remover contato</button>
+    </div>
+</div>

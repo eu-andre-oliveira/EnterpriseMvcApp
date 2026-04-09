@@ -1,6 +1,6 @@
 using EnterpriseMvcApp.Domain.Entidades;
 
-namespace EnterpriseMvcApp.Infrastructure.Data.Repositories;
+namespace EnterpriseMvcApp.Domain.Interfaces;
 
 public interface IClienteRepository
 {

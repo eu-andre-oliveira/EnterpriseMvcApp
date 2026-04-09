@@ -1,4 +1,5 @@
 using EnterpriseMvcApp.Domain.Entidades;
+using EnterpriseMvcApp.Domain.Interfaces;
 using EnterpriseMvcApp.Infrastructure.Data.Context;
 using Microsoft.EntityFrameworkCore;
 

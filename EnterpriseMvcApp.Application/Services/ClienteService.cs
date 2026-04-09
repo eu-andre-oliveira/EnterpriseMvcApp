@@ -1,8 +1,7 @@
-using EnterpriseMvcApp.Application.Services;
 using EnterpriseMvcApp.Domain.Entidades;
-using EnterpriseMvcApp.Infrastructure.Data.Repositories;
+using EnterpriseMvcApp.Domain.Interfaces;
 
-namespace EnterpriseMvcApp.Infrastructure.Services;
+namespace EnterpriseMvcApp.Application.Services;
 
 public class ClienteService : IClienteService
 {

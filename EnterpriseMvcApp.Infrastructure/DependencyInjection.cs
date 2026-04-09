@@ -1,7 +1,7 @@
 using EnterpriseMvcApp.Application.Services;
+using EnterpriseMvcApp.Domain.Interfaces;
 using EnterpriseMvcApp.Infrastructure.Data.Context;
 using EnterpriseMvcApp.Infrastructure.Data.Repositories;
-using EnterpriseMvcApp.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

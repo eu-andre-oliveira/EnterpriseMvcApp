@@ -8,6 +8,7 @@ public class Cliente
     public string? Email { get; set; }
     public string? Telefone { get; set; }
     public bool Ativo { get; set; }
+    public string? OrigemCliente { get; set; }
     public DateTime DataCadastro { get; set; }
     public DateTime? DataAtualizacao { get; set; }
 

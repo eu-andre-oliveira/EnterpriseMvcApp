@@ -40,7 +40,13 @@
                             <input asp-for="Ativo" class="form-check-input" />
                             <label asp-for="Ativo" class="form-check-label"></label>
                         </div>
+
                     </div>
+                   <div class="col-md-6">  
+                    <label asp-for="OrigemCliente" class="form-label">Origem do Cliente</label>
+                    <input asp-for="OrigemCliente" class="form-control" placeholder="Ex: Indicação, Site, Redes Sociais..." />
+                    <span asp-validation-for="OrigemCliente" class="text-danger"></span>
+                </div>
                 </div>
             </div>
         </div>

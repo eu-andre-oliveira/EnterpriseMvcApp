@@ -159,7 +159,8 @@ public class ClientesController : Controller
             CnpjCpf = cliente.CnpjCpf,
             Email = cliente.Email,
             Telefone = cliente.Telefone,
-            Ativo = cliente.Ativo
+            Ativo = cliente.Ativo,
+            OrigemCliente = cliente.OrigemCliente
         };
     }
 
@@ -173,6 +174,7 @@ public class ClientesController : Controller
             Email = cliente.Email,
             Telefone = cliente.Telefone,
             Ativo = cliente.Ativo,
+            OrigemCliente = cliente.OrigemCliente,
             Contatos = cliente.Contatos.Select(c => new ContatoClienteViewModel
             {
                 Id = c.Id,
@@ -195,6 +197,7 @@ public class ClientesController : Controller
             Email = model.Email?.Trim(),
             Telefone = model.Telefone?.Trim(),
             Ativo = model.Ativo,
+            OrigemCliente = model.OrigemCliente?.Trim(),
             Contatos = model.Contatos.Select(c => new ContatoCliente
             {
                 Id = c.Id,

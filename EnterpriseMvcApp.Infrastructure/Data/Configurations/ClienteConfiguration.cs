@@ -27,6 +27,8 @@ public class ClienteConfiguration : IEntityTypeConfiguration<Cliente>
 
         builder.Property(c => c.Ativo)
             .IsRequired();
+        builder.Property(c => c.OrigemCliente)
+            .HasColumnType("varchar(255)");
 
         builder.Property(c => c.DataCadastro)
             .IsRequired();

@@ -21,6 +21,8 @@ public class ClienteViewModel
     public string? Telefone { get; set; }
 
     public bool Ativo { get; set; } = true;
+    [StringLength(255, ErrorMessage = "Origem do cliente deve ter no máximo 255 caracteres.")]
+    public string? OrigemCliente { get; set; }
 
     public List<ContatoClienteViewModel> Contatos { get; set; } = new();
 }

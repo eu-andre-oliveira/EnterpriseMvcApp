@@ -33,6 +33,8 @@
                     <th>Email</th>
                     <th>Telefone</th>
                     <th>Ativo</th>
+                    <th>Origem</th> 
+                    <th class="text-end">Ações</th>
                     <th class="text-end">Ações</th>
                 </tr>
             </thead>
@@ -54,6 +56,8 @@
                                 <span class="badge bg-secondary">Não</span>
                             }
                         </td>
+                        <td>@cliente.OrigemCliente</td>  <!-- ← ADICIONAR -->
+                        <td class="text-end">
                         <td class="text-end">
                             <a asp-action="Edit" asp-route-id="@cliente.Id" class="btn btn-sm btn-outline-primary">Editar</a>
                             <a asp-action="Details" asp-route-id="@cliente.Id" class="btn btn-sm btn-outline-info">Detalhes</a>

@@ -68,6 +68,7 @@ public class ClienteService : IClienteService
         atual.Email = cliente.Email?.Trim();
         atual.Telefone = cliente.Telefone?.Trim();
         atual.Ativo = cliente.Ativo;
+        atual.OrigemCliente = cliente.OrigemCliente?.Trim();
         atual.DataAtualizacao = DateTime.UtcNow;
 
         atual.Contatos.Clear();

@@ -1,0 +1,65 @@
+@model ClienteViewModel
+@{
+    ViewData["Title"] = "Detalhes do Cliente";
+}
+
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-light">
+        <h5 class="mb-0">Dados do Cliente</h5>
+    </div>
+    <div class="card-body">
+        <div class="row g-3">
+            <div class="col-md-6"><strong>Nome:</strong> @Model.Nome</div>
+            <div class="col-md-6"><strong>CNPJ/CPF:</strong> @Model.CnpjCpf</div>
+            <div class="col-md-6"><strong>Email:</strong> @Model.Email</div>
+            <div class="col-md-4"><strong>Telefone:</strong> @Model.Telefone</div>
+            <div class="col-md-2"><strong>Ativo:</strong> @(Model.Ativo ? "Sim" : "Não")</div>
+            <div class="col-md-6"><strong>Origem do Cliente:</strong> @Model.OrigemCliente</div>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-light">
+        <h5 class="mb-0">Contatos</h5>
+    </div>
+    <div class="card-body table-responsive">
+        <table class="table table-striped align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Principal</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Contatos.Any())
+                {
+                    @foreach (var contato in Model.Contatos)
+                    {
+                        <tr>
+                            <td>@contato.Nome</td>
+                            <td>@contato.Cargo</td>
+                            <td>@contato.Email</td>
+                            <td>@contato.Telefone</td>
+                            <td>@(contato.Principal ? "Sim" : "Não")</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="5" class="text-center text-muted">Nenhum contato cadastrado.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="d-flex gap-2">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+</div>
